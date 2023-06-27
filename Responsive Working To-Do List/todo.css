@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+nav ul li {
+    padding-right: 30px;
+    display: inline;
+    list-style-type: none;
+
+}
+
+nav ul li a {
+    color: white;
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    text-shadow: 0px 0px 5px white;
+}
+
+nav ul li a:active {
+    opacity: 0.7;
+
+}
+
+nav ul {
+    padding-right: 50px;
+}
+
+.logo {
+    padding-left: 70px;
+    color: black;
+    font-size: 27px;
+    transition: 0.2s;
+}
+
+.logo:hover {
+    text-shadow: 0px 0px 5px black;
+
+}
+
+.logo:active {
+    opacity: 0.7;
+}
+
+
+.hero {
+    padding: 0;
+    margin: 0;
+    background-image: url(images/pexels-photo-295826.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+
+
+.hero p {
+    font-size: 30px;
+    color: #333;
+    padding-top: 0px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.register {
+    color: white;
+    font-size: 30px;
+    border: solid;
+    padding: 5px;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: rgb(107, 107, 107);
+    background-color: rgb(107, 107, 107);
+    transition: 0.2s;
+}
+
+.register:hover {
+    background-color: transparent;
+    color:rgb(107, 107, 107);
+}
+
+.login {
+    margin-left: 20px;
+    margin-top: 100px;
+    border: solid;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px;
+    color: rgb(107, 107, 107);
+    font-size: 30px;
+}
+
+.login:hover {
+    background-color: rgb(107, 107, 107);
+    color: white;
+    border-color: rgb(107, 107, 107);
+    transition: 0.2s;
+
+}
+
+#about h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#about {
+    background-color: rgb(145, 145, 145);
+    margin-top: 0px;
+    padding-top:1px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.about {
+    visibility: hidden;
+}
+
+#about p {
+    font-size: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 6px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 65vw;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgb(155, 155, 155);
+    align-content: center;
+    margin: 10px;
+    
+  }
+  
+  button[type="submit"] {
+    padding: 15px;
+    width: 160px;
+    color: #fff;
+    border: none;
+    font-size: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+
+  }
+  #contact {
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(155, 155, 155);
+    padding: 1px;
+}
+
+  button {
+    background-color: black;
+
+  }
+  
+  button[type="submit"]:hover {
+    background-color: rgb(29, 29, 29);
+  }
+
+
+  
+
+  @media (max-width:576px) {
+    .logo {
+        visibility: hidden;
+    }
+    nav ul li{
+        padding-right: 20px;
+        
+    }
+
+
+    nav ul {
+        width: 100%;
+
+    }
+
+    header {
+        position: fixed;
+        right: 80px;
+        }
+
+    nav ul li a {
+        font-size: 30px;
+    }
+
+    .scnd-p {
+        visibility: hidden;
+    }
+
+    #about {
+        height: 70vh;
+    }
+
+    .register {
+        margin-left: 0px;
+    }
+
+
+  }
+
+  @media (max-width:484px) {
+    
+    nav ul li a {
+        font-size: 25px;
+    }
+
+    .about {
+        visibility:visible;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 35px;
+        font-weight: 600;
+        margin: 0;
+        margin-top: -80px;
+    }
+
+    .abt-web {
+        visibility: hidden;
+        
+    }
+
+  }
+
+  @media (max-width:437px) {
+    nav ul li a {
+        font-size: 24px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding-left: 20px;
+    }
+  }
+
+  @media (max-width:427px) {
+    nav ul li a {
+        font-size: 21px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 25px;
+    }
+
+    .register {
+        font-size: 23px;
+    }
+
+    .login {
+        font-size: 23px;
+    }
+
+    
+
+  }
+
+  @media (max-width:397px) {
+    nav ul li a {
+        font-size: 20px;
+    }
+
+ 
+  }
+
+  @media (max-width:387px) {
+    nav ul li a {
+        font-size: 17px;
+    }
+
+  }
+
+
+  @media (max-width:357px) {
+
+  nav ul li a {
+    font-size: 16px;
+
+}
+
+}
+
+@media (max-width:368px) {
+    body {
+        overflow-x: hidden;
+    }
+    #about p {
+        font-size: 17px;
+        width: 210px;
+        padding-left: 60px;
+        padding-right: 50px;
+        
+    }
+
+    #about {
+        height: 80vh;
+    }
+
+}
+
+@media (max-width:368px) {
+    nav ul li a {
+        font-size: 12px;
+    
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+}

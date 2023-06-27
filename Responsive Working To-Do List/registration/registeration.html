@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="registration.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="#" class="form" id="registrationForm">
+        <div class="input-box">
+          <label>Full Name:</label>
+          <input type="text" placeholder="Enter your full name" required>
+        </div>
+  
+        <div class="input-box">
+          <label>Email Address:</label>
+          <input type="email" placeholder="Enter Email Address" required>
+        </div>
+  
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number:</label>
+            <input type="tel" placeholder="Enter phone number">
+          </div>
+          <div class="input-box BD">
+            <label>Birth Date:</label>
+            <input type="date" placeholder="Enter your birth date">
+          </div>
+        </div>
+  
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender">
+              <label for="check-male">Male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender">
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-walmart-bag" name="gender" checked>
+              <label for="check-walmart-bag">Wallmart-Bag</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="input-box address">
+          <label>Address:</label>
+          <input type="text" placeholder="Enter Street Address" required>
+          <input type="text" placeholder="Enter your city" required>
+  
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>I Don't Know</option>
+                <option>Pakistan</option>
+                <option>Pakistan</option>
+                <option>Pakistan</option>
+                <option>Pakistan</option>
+                <option>Pakistan</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your region" required>
+          </div>
+  
+          <input type="text" placeholder="Enter postal code" required>
+        </div>
+  
+        <button onclick="validateRegistrationForm(event)">Submit</button>
+  
+        <script>
+          function validateRegistrationForm(event) {
+            event.preventDefault(); // Prevent form submission
+  
+            // Get the form element
+            var form = document.getElementById('registrationForm');
+  
+            // Check if all required fields are filled
+            if (form.checkValidity()) {
+              // Perform additional registration processing here
+              // ...
+  
+              // Redirect to the welcome page
+              window.location.href = "../to-do-list/official-list.html";
+            } else {
+              // If any required field is empty, display an error message or take appropriate action
+              // For example, you can add an error message below the submit button
+              var errorMessage = document.getElementById('error-message');
+              errorMessage.textContent = 'Please fill in all required fields.';
+            }
+          }
+        </script>
+  
+        <p id="error-message"></p>
+      </form>
+    </section>
+  </body>
+        
+    
+
+</html>

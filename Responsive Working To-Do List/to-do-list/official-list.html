@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="official-list.css">
+    <title>To-Do-List</title>
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="../todo.html" target="_blank">To-Do.</a>
+        <nav>
+            <ul>
+                <li><a href="../todo.html" target="_blank">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Task 1</h1>
+            <input name="option1" type="checkbox" onclick="saveProgress()" class="custom-checkbox">
+            <textarea id="myTextarea1" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 2</h1>
+            <input name="option2" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea2" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 3</h1>
+            <input name="option3" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea3" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 4</h1>
+            <input name="option4" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea4" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 5</h1>
+            <input name="option5" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea5" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 6</h1>
+            <input name="option6" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea6" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 7</h1>
+            <input name="option7" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea7" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 8</h1>
+            <input name="option8" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea8" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 9</h1>
+            <input name="option9" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea9" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <h1>Task 10</h1>
+            <input name="option10" type="checkbox" onclick="saveProgress()">
+            <textarea id="myTextarea10" cols="150" rows="3" oninput="saveProgress()"></textarea>
+            <script>
+                // Function to save the form progress to local storage
+                function saveProgress() {
+                    var textareas = document.querySelectorAll('textarea');
+                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    var textareaValues = {};
+
+                    textareas.forEach(function(textarea) {
+                        textareaValues[textarea.id]
+                        = textarea.value;
+                    });
+
+                    var checkboxValues = [];
+
+                    checkboxes.forEach(function(checkbox) {
+                        if (checkbox.checked) {
+                            checkboxValues.push(checkbox.name);
+                        }
+                    });
+
+                    var formProgress = {
+                        textareaValues: textareaValues,
+                        checkboxValues: checkboxValues
+                    };
+
+                    localStorage.setItem('formProgress', JSON.stringify(formProgress));
+                }
+
+                // Function to load the saved form progress from local storage
+                function loadProgress() {
+                    var textareas = document.querySelectorAll('textarea');
+                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+                    var savedProgress = localStorage.getItem('formProgress');
+
+                    if (savedProgress) {
+                        var formProgress = JSON.parse(savedProgress);
+
+                        Object.keys(formProgress.textareaValues).forEach(function(key) {
+                            if (document.getElementById(key)) {
+                                document.getElementById(key).value = formProgress.textareaValues[key];
+                            }
+                        });
+
+                        checkboxes.forEach(function(checkbox) {
+                            checkbox.checked = formProgress.checkboxValues.includes(checkbox.name);
+                        });
+                    }
+                }
+
+                // Call the loadProgress function when the page loads
+                window.onload = loadProgress;
+            </script>
+        </div>
+    </section>
+</body>
+</html>

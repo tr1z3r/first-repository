@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    background-color:  rgb(204, 204, 204);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: solid;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+nav ul li {
+    padding-right: 50px;
+    display: inline;
+    list-style-type: none;
+
+}
+
+nav ul li a {
+    color: white;
+    font-size: 35px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    text-shadow: 0px 0px 5px white;
+}
+
+nav ul li a:active {
+    opacity: 0.7;
+
+}
+
+nav ul {
+    padding-right: 0px;
+}
+
+.logo {
+    padding-left: 50px;
+    color: black;
+    font-size: 35px;
+    transition: 0.2s;
+}
+
+.logo:hover {
+    text-shadow: 0px 0px 5px black;
+
+}
+
+.logo:active {
+    opacity: 0.7;
+}
+
+.container{
+    padding-top: 100px;
+    padding-left: 250px;
+
+}
+
+.container h1 {
+    margin: 5px;
+}
+
+.container input[type="checkbox"] {
+    height: 45px;
+    width: 35px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container input[type="checkbox"]:hover {
+   transform: translateY(-10px);
+}
+
+.container input[type="checkbox"]:active {
+    transform: scale(0.8);
+ }
+
+.container textarea {
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    width: 1100px;
+    height: 40px;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-top: 8px;   
+}
+
+
+
+@media (max-width:1414px) {
+    .container {
+        padding-left: 100px;
+    }  
+}
+
+@media (max-width:1464px) {
+    .container {
+        padding-left: 80px;
+    }  
+}
+
+@media (max-width:1264px) {
+    .container {
+        padding-left: 50px;
+    }  
+}
+
+@media (max-width:1214px) {
+    .container {
+        padding-left: 0px;
+    }  
+}
+
+@media (max-width:1164px) {
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .container textarea {
+        width: 100vh;
+    }
+
+    .container {
+        padding-left: 150px;
+    }
+}
+
+@media (max-width:956px) {
+    .container {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width:890px) {
+    .container {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width:840px) {
+    .container {
+        padding-left: 0px;
+    }
+}
+
+
+@media (max-width:790px) {
+    header nav ul li a {
+        font-size: 25px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .container textarea{
+        width: 80vh;
+    }
+
+    .container {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width:685px) {
+    .container {
+        padding-left: 0px;
+
+    }
+}
+
+@media (max-width:645px) {
+    .container textarea{
+        width: 60vh;
+    }
+
+    .container {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width:539px) {
+    .container {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width:481px) {
+    .container textarea {
+        width: 50vh;
+    }
+}
+
+@media (max-width:411px) {
+    .container textarea {
+        width: 40vh;
+    }
+}
+
+@media (max-width:347px) {
+    .container textarea {
+        width: 30vh;
+        padding-left: 50px;
+    }
+
+   
+}
+
+@media (max-width:307px) {
+    .logo {
+        font-size: 25px;
+        padding-left: 20px;
+    }
+    .container textarea {
+        padding-left: 40px;
+    }
+}
+
+
+@media (max-width:297px) {
+    .container textarea{
+        width: 25vh;
+    }
+}
+
+@media (max-width:263px) {
+    .container textarea{
+        width: 20vh;
+    }
+
+    .logo {
+        font-size: 20px;
+        padding-left: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width:228px) {
+    .logo {
+        font-size: 17px;
+    }
+
+    header nav ul li a {
+        font-size: 17px;
+    }
+    .container textarea {
+        width: 15vh;
+    }
+}
